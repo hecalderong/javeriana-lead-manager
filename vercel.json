@@ -2,6 +2,5 @@
   "name": "javeriana-lead-manager",
   "framework": "vite",
   "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "rootDirectory": "app"
+  "outputDirectory": "dist"
 }
