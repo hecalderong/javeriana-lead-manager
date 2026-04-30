@@ -1,0 +1,39 @@
+version: '3.9'
+
+services:
+  # Servicio principal de React + Vite
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: react-app-javeriana-lead-manager
+    
+    # Volúmenes para persistencia de datos
+    volumes:
+      # Montar carpeta app con código fuente (excluyendo node_modules)
+      - ./app:/app
+      # Volumen nombrado para node_modules (no se sobrescribe)
+      - app_node_modules:/app/node_modules
+    
+    # Puertos expuestos
+    ports:
+      - "3000:3000"  # Puerto principal mapeado al 3000
+    
+    # Variables de entorno
+    environment:
+      - NODE_ENV=development
+      - VITE_HOST=0.0.0.0
+    
+    # Comando para ejecutar
+    command: npm run dev
+    
+    # Reiniciar automáticamente si se detiene
+    restart: unless-stopped
+    
+    # Mantener stdin abierto incluso sin tty
+    stdin_open: true
+    tty: true
+
+# Volúmenes nombrados
+volumes:
+  app_node_modules:
