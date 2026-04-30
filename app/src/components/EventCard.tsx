@@ -1,11 +1,10 @@
-import React from 'react';
 import { Event } from '../types';
 
 interface EventCardProps {
   event: Event;
 }
 
-const EventCard: React.FC<EventCardProps> = ({ event }) => {
+const EventCard = ({ event }: EventCardProps) => {
   const categoryColors: Record<string, string> = {
     Pregrado: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300',
     Posgrado: 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300',

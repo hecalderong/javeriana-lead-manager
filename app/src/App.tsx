@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { LeadProvider } from './context/LeadContext';
 import LeadForm from './components/LeadForm';
 import LeadList from './components/LeadList';

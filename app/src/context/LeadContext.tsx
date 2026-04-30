@@ -1,11 +1,11 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { Lead, LeadContextType } from '../types';
 
 const LeadContext = createContext<LeadContextType | undefined>(undefined);
 
 const STORAGE_KEY = 'javeriana_leads';
 
-export const LeadProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+export const LeadProvider = ({ children }: { children: ReactNode }) => {
   const [leads, setLeads] = useState<Lead[]>(() => {
     const stored = localStorage.getItem(STORAGE_KEY);
     return stored ? JSON.parse(stored) : [];

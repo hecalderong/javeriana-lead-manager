@@ -1,7 +1,6 @@
-import React from 'react';
 import { useLeadContext } from '../context/LeadContext';
 
-const LeadList: React.FC = () => {
+const LeadList = () => {
   const { leads, removeLead } = useLeadContext();
 
   return (

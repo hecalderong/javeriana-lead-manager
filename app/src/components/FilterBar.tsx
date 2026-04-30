@@ -1,4 +1,3 @@
-import React from 'react';
 import { CategoryOption } from '../types';
 
 interface FilterBarProps {
@@ -9,13 +8,13 @@ interface FilterBarProps {
   categories: string[];
 }
 
-const FilterBar: React.FC<FilterBarProps> = ({
+const FilterBar = ({
   searchTerm,
   onSearchChange,
   selectedCategory,
   onCategoryChange,
   categories,
-}) => {
+}: FilterBarProps) => {
   return (
     <div className="flex flex-col md:flex-row gap-4 mb-8 bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
       <div className="flex-1 relative">

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Event } from '../types';
 import EventCard from './EventCard';
 
@@ -8,7 +7,7 @@ interface EventListProps {
   error: string | null;
 }
 
-const EventList: React.FC<EventListProps> = ({ events, loading, error }) => {
+const EventList = ({ events, loading, error }: EventListProps) => {
   if (loading) {
     return (
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">

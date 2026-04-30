@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useLeadContext } from '../context/LeadContext';
 
 const normalizeName = (name: string): string => {
